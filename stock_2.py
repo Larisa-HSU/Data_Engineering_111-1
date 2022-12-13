@@ -9,8 +9,10 @@ from selenium import webdriver
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.webdriver.common.by import *
 
+#webdriver路徑記得要改
+
 def investor(stockcode):
-    url=f"https://goodinfo.tw/tw/ShowBuySaleChart.asp?STOCK_ID={stockcode}&CHT_CAT=DATE"   #法人持股
+    url=f"https://goodinfo.tw/tw/ShowBuySaleChart.asp?STOCK_ID={stockcode}&CHT_CAT=DATE"   #法人持股:一年
 
     chrome=webdriver.Chrome(executable_path=r'D:\大三\資料工程\chromedriver.exe')
 
@@ -23,6 +25,37 @@ def investor(stockcode):
     result=pd.read_html(chrome.page_source)
 
     data=result[25]
+    chrome.quit()
+    
+    return data
+
+    
+def kchart(stockcode):
+    url=f"https://goodinfo.tw/tw/ShowK_Chart.asp?STOCK_ID={stockcode}&CHT_CAT2=DATE"   #k線圖:一年
+
+    chrome=webdriver.Chrome(executable_path=r'D:\大三\資料工程\chromedriver.exe')
+
+    chrome.get(url)
+
+    chrome.find_element_by_css_selector("#selK_ChartPeriod > option:nth-child(3)").click()
+    time.sleep(2)
+    result=pd.read_html(chrome.page_source)
+
+    data=result[25]
+    chrome.quit()
+    
+    return data
+
+def shareholder(stockcode):
+    url=f"https://goodinfo.tw/tw/EquityDistributionCatHis.asp?STOCK_ID={stockcode}"   #股東結構:比例
+
+    chrome=webdriver.Chrome(executable_path=r'D:\大三\資料工程\chromedriver.exe')
+
+    chrome.get(url)
+
+    result=pd.read_html(chrome.page_source)
+
+    data=result[17]
     chrome.quit()
     
     return data
