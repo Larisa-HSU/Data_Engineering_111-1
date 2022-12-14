@@ -1,6 +1,6 @@
 # Data_Engineering_111-1
 [如網址內的圖 上傳檔案的按鈕 Add file ](https://imgur.com/a/WFwsYJb)
-> 原諒我忘記用紅框標記 Add File 
+> 原諒我忘記用紅框標記 Add File </p>
 > >Add File 圖片中的右上角位置
 > > >上傳檔案請選擇 upload file
 ### 上傳檔案後務必寫commit 以供大家一眼了解內容 
@@ -8,3 +8,12 @@
 ### 更正檔案後也務必寫commit，commit 的內容請書寫更正的地方或是功能
 ### commit 是為了方便了解加快大家的開發速度 麻煩務必書寫
 [如網址內的圖 須書寫處](https://imgur.com/a/3ibOvhp.png)
+
+# 各ER Model 相對應程式碼指引
+> 經營績效表 : 獲利指數.ipynb </p>
+> 持股等級股東持有比例表 : 持股分級.ipynb (2022W51~2019W51) </p>
+> 股票基本資料表 : Stock_data.ipynb (In [8]) </p>
+> 當日買賣單位表 : stock_2.py (investor(stockcode),一年) </p>
+> 當日走勢表 : stock_2.py (kchart(stockcode),一年) </p>
+> 當日成交資料表 : stock_2.py (kchart(stockcode),一年) </p>
+> 各類型股東持股表 : stock_2.py (shareholder(stockcode),一年) </p>
