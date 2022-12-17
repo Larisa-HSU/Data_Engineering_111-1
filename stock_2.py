@@ -59,3 +59,20 @@ def shareholder(stockcode):
     chrome.quit()
     
     return data
+
+
+def cash(stockcode):
+    url=f"https://goodinfo.tw/tw/StockFinDetail.asp?RPT_CAT=CF_M_QUAR_ACC&STOCK_ID={stockcode}"   #現金流量
+
+    chrome=webdriver.Chrome(executable_path=r'D:\大三\資料工程\chromedriver.exe')
+
+    chrome.get(url)
+
+    chrome.find_element_by_css_selector("#RPT_CAT > option:nth-child(1)").click()
+    time.sleep(2)
+    result=pd.read_html(chrome.page_source)
+
+    data=pd.DataFrame(result[15].iloc[73,1:]).T
+    chrome.quit()
+    
+    return data
