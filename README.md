@@ -9,7 +9,7 @@
 commit 是為了方便了解加快大家的開發速度 麻煩務必書寫
 <img src="https://github.com/Larisa-HSU/Data_Engineering_111-1/blob/main/Picture/Screenshot%202022-12-13%20193647.png" width='600' leight='1000'/></img>
 
-# 各ER Model 相對應程式碼指引
+# 程式碼指引
 > 經營績效表 : 獲利指數.ipynb </p>
 > 持股等級股東持有比例表 : 持股分級.ipynb (2022W51~2019W51) </p>
 > 股票基本資料表 : Stock_data.ipynb (In [8]) </p>
@@ -17,3 +17,6 @@ commit 是為了方便了解加快大家的開發速度 麻煩務必書寫
 > 當日走勢表 : stock_2.py (kchart(stockcode),一年) </p>
 > 當日成交資料表 : stock_2.py (kchart(stockcode),一年) </p>
 > 各類型股東持股表 : stock_2.py (shareholder(stockcode),一年) </p>
+
+# ER Model
+<img src="https://github.com/Larisa-HSU/Data_Engineering_111-1/tree/main/Picture/image.png" width='600' leight='1000'/></img>
