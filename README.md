@@ -19,4 +19,4 @@ commit 是為了方便了解加快大家的開發速度 麻煩務必書寫
 > 各類型股東持股表 : stock_2.py (shareholder(stockcode),一年) </p>
 
 # ER Model
-<img src="https://github.com/Larisa-HSU/Data_Engineering_111-1/tree/main/Picture/image.png" /></img>
+<img src="https://github.com/Larisa-HSU/Data_Engineering_111-1/tree/main/Picture/image.png"  width='600' leight='1000'/></img>
